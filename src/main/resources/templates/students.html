@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Thymeleaf</title>
+</head>
+<body>
+
+<h1>Student List</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}">123</td>
+        <td th:text="${student.firstName}">test</td>
+        <td th:text="${student.lastName}">test</td>
+        <td th:text="${student.email}">test</td>
+        <td th:text="${student.phone}">test</td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
